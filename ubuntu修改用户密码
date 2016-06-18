@@ -1,0 +1,8 @@
+1.
+
+jogi@mark:~$ sudo passwd jogi
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+jogi@mark:~$ 
+

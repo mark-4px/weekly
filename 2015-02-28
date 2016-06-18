@@ -1,0 +1,84 @@
+
+ 关于nodejs异步编程的
+https://github.com/aimingoo/continuer/wiki/关于Continuer的What与Why
+
+作者自己实现了 一个队列，把每个需要执行的方法放在队列中，依次执行
+
+----------------------------------------------------------------------------
+
+Javascript异步编程的4种方法
+http://www.ruanyifeng.com/blog/2012/12/asynchronous＿javascript.html
+
+1. 回调
+2. 基于事件的观察者模式
+3. 基于外部插件的 发布订阅/观察者 模式
+4. jquery defered promise done then always
+
+----------------------------------------------------------------------------
+
+45 个js ji 技巧
+http://modernweb.com/2013/12/23/45-useful-javascript-tips-tricks-and-best-practices/
+
+ 1. 声明变量时不要忘记 var
+ 2. 使用 强等 === 代替 ==
+ 3. undefined, null, 0, false, NaN, '' 都是false
+ 4. 在行尾使用分号结束 http://davidwalsh.name/javascript-semicolons.
+ 5. 创建对象构造方法
+ 6. 小心使用typeof, instanceof and constructor
+ 7. 创建自执行方法
+ 8. 从数组中获取随机值
+ 9. 在给定的范围内获取随机值
+10. 生成连续数字的数组
+11. Math.random().toString(36).substr(2) 生成随机的字母数字 字符串
+12. 使用sort 方法 将一组数字重新洗牌，重新随机顺序
+13. 正则表达式实现string trim str.replace(/^\s+|\s+$/g, "")
+14. Array.prototype.push.apply(array1, array2); 实现 合并两个数组
+15. 将arguments 参数转换成数组var argArray = Array.prototype.slice.call(arguments);
+16. 判断给定的参数只不是数字return !isNaN(parseFloat(n)) && isFinite(n);
+17. 判定数组类型 return Object.prototype.toString.call(obj) === '[object Array]' ;
+18. 从数组获取最大最小值Math.max.apply(Math, numbers); Math.min.apply(Math, numbers);
+19. 清空数组 myArray.length = 0; // myArray will be equal to [].
+20. 从数组中删除元素时不要使用delete,delete不会改变数组长度，使用splice
+21. 使用length属性截取数组
+22. 使用&& 或者 || 来替代 判断语句 console && console.log('xxxx');
+23. 使用map方法使数组翻倍
+24. num.toFixed(4); 保留x位有效数字
+25. 浮点数的精度不一致的问题0.1 + 0.2 === 0.3 // is false 使用toFixed() and toPrecision()来避免
+26. 使用for in 循环的时候加上hasOwnProperty判断，排除原生的属性
+27. 逗号的作用 a = (1,2,3,4); a = 4
+28. 缓存选择器对象
+29. 判断数字是否是有限数字isFinite之前先检测isFinite(undefined);  // false isFinite();   // false isFinite(null);  // true  !!! 
+30. 确保索引不要是负数
+31. 使用json进行序列化
+32. 避免使用eval 和 Function构造器
+33. 避免使用with,with会增加全局变量可能造成变量污染
+34. 避免对数组使用for in
+35. 对setTimeout() and setInterval()传递function而不是string ,传递string会使用eval进行转化
+36. 使用switch替代 一堆的 if else 
+37. 在数字边界的判断中使用 switch case
+38. 使用prototype创建指定类型的 对象
+39. 简化的html转义方法
+40. 避免在循环体中使用try catch finally
+41. 对 网络连接使用连接超时
+42. 处理socket超时
+43. 基本运算符 比 方法调用 要高效
+44. js代码美化
+45. js是 很好的值得 敬畏的 语言
+
+---------------------------------------------------------------------------------------------------
+
+nodejs 开发者 最容易 犯的 10 个错误
+https://www.airpair.com/node.js/posts/top-10-mistakes-node-developers-make 
+ 1. 不使用 开发工具
+  
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+
+Javascript: document.execCommand cross-browser?
+http://stackoverflow.com/questions/1817441/javascript-document-execcommand-cross-browser
+
+execCommand insertHtml in Internet Explorer
+http://stackoverflow.com/questions/3398378/execcommand-inserthtml-in-internet-explorer
+
+execCommand
+https://social.msdn.microsoft.com/Search/en-US?query=execCommand&emptyWatermark=true&ac=4
+
+
+Internet Explorer Dev Center execCommand method
+https://msdn.microsoft.com/en-us/library/ie/ms536419(v=vs.85).aspx

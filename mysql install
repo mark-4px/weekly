@@ -1,0 +1,52 @@
+安装MySQL
+
+sudo apt-get install mysql-server 
+
+修改ip访问
+
+
+1.修改配置文件
+$sudo gedit /etc/mysql/my.cnf
+
+端口也是在这里修改，看到端口，直接改掉
+
+老的版本中
+
+>skip-networking => # skip-networking
+
+新的版本中
+
+>bind-address=127.0.0.1 => bind-address= 你机器的IP
+
+这样就可以允许其他机器访问MySQL了。 
+
+2.修改用户权限
+
+mysql -u root -p
+
+mysql>use mysql;
+
+mysql>update user set Host =’%' where User =’root’ and Host='localhost';
+
+mysql>flush privileges;
+
+重启mysql
+
+没有找到怎么重启服务
+
+重启电脑是可以解决的
+
+
+http://www.jb51.net/os/Ubuntu/38725.html
+常用命令
+
+补充：wiki.4px.com
+标题：linux下mysql启动
+详细介绍了linux下的mysql安装，启动，以及安装文件的存储位置等详细信息
+
+
+
+
+
+
+
