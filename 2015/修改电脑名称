@@ -1,0 +1,17 @@
+Ubuntu如何修改计算机名称
+比如我的计算机名称是XXX-TTT,我想修改成YYY-ZZZ
+
+修改有两步：
+[1]修改/etc/hosts
+
+127.0.0.1       localhost
+192.168.76.21   YYY-ZZZ
+
+
+[2]修改/etc/hostname
+内容为
+
+YYY-ZZZ
+
+保存，退出，重启，就可以了。
+

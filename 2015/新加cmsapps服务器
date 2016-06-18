@@ -1,0 +1,54 @@
+登录cmsapps
+#su root
+	# apt-get update
+	# apt-get install subversion
+	# apt-get install nmon
+
+#vi /etc/hosts
+	>> add "127.0.0.1 cmsapps" entry
+	>> add "113.106.92.190 mrsvn" entry
+	>> add "198.101.229.114 frameworkserver" entry
+	>> add "110.75.216.110  gw.api.alibaba.com" entry
+
+
+#设置iptables，给rmi 1099端口加入iptables
+	cd /etc/rc.local,加入下面内容
+	/sbin/iptables -A INPUT -p tcp -s cmsapps --dport 1099 -j ACCEPT
+	/sbin/iptables -A INPUT -p tcp -s localhost --dport 1099 -j ACCEPT
+	/sbin/iptables -A INPUT -p tcp -s <ip> --dport 1099 -j ACCEPT
+
+
+#su cmsapps
+
+	# svn checkout svn://mrsvn/branches/mysqlV01/Runtimes/slave/cmsapps/bin
+	# svn checkout svn://mrsvn/branches/mysqlV01/Runtimes/slave/cmsfs/cache
+	# cd bin
+	# ./update
+
+	# mkdir dist
+	# mkdir usr
+	# mkdir log
+	# mkdir proxy
+	
+	# sftp <existing server ip address>
+	# cd dist
+	# get james-2.3.2.tar.gz
+	# get jdk1.6.0_33.tar.gz
+	# tar xvf james-2.3.2.tar.gz;tar xvf jdk1.6.0_33.tar.gz;
+	# mv james-2.3.2 ../usr
+	# mv jdk1.6.0_33 ../usr
+
+
+	# cd etc
+	# vi serverID.txt
+	# add serverID
+	# vi cloudID.txt
+	# add cloudID
+	# vi c3p0.properties
+	# update jdbcURL & usre & password
+
+
+	
+
+
+

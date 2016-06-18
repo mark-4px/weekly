@@ -1,0 +1,21 @@
+改變工作區的數量
+
+到 Dash 開啟終端機。
+
+若要更改排數，鍵入以下指令，將最後面的數字改成您想要的數字。按下 Enter。
+
+gconftool-2 --type=int --set /apps/compiz-1/general/screen0/options/vsize 4
+
+若要更改列數，鍵入以下指令，將最後面的數字改成您想要的數字。按下 Enter。
+
+gconftool-2 --type=int --set /apps/compiz-1/general/screen0/options/hsize 4
+
+
+
+
+
+
+一下在13.10中使用
+
+gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
+gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2

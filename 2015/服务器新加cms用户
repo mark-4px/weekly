@@ -1,0 +1,49 @@
+cms登录
+	#su root
+	#add /etc/rc.local
+	#/sbin/iptables -t nat -A OUTPUT -o lo -p tcp --dport 80 -j REDIRECT --to-port 8080
+	#/sbin/iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+	#/sbin/iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+
+	# vi /etc/hosts
+	# add 	113.106.92.190  mrsvn
+	# add	198.101.229.114 frameworkserver
+	# add	110.75.216.110 gw.api.alibaba.com
+	# add	<ip> cmsapps
+
+
+
+
+	# apt-get update
+	# apt-get install subversion
+	# apt-get install nmon
+
+
+	# su cms
+	# svn checkout svn://mrsvn/branches/mysqlV01/Runtimes/slave/cms/bin
+
+	# cd bin
+	# ./updateNow
+
+
+	# mkdir dist
+	# mkdir log
+	# mkdir usr
+
+	# sftp <ip>@<server>
+	# cd dist
+	# get apache-tomcat-7.0.10.tar.gz
+	# get jdk1.6.0_33.tar.gz
+	# get james-2.3.2.tar.gz
+	# tar xvf apache-tomcat-7.0.10.tar.gz jdk1.6.0_33.tar.gz james-2.3.2.tar.gz
+	# mv apache-tomcat-7.0.10 ../usr
+	# mv jdk1.6.0_33 ../usr
+	# mv james-2.3.2 ../usr
+	# cd ~/usr/apache-tomcat-7.0.10/conf
+	# vi serve.xml
+	# update host
+
+
+
+	
+

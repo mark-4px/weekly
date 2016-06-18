@@ -1,0 +1,22 @@
+jquery绑定事件传递参数
+
+$(document).ready(function(){
+ $("#btn").on("click", function(event,par){
+   console.log(par);
+  });
+ $("#btn").trigger("click",['test param']);
+});
+
+
+绑定事件中传递参数
+$(document).ready(function(){
+ $("#btn").bind("click", function(event,a ,b){
+   start(event, a, b);
+  });
+ $("#btn").trigger("click",["5", "6"]); //5，6可以不是字符串类型而为任意类型的数据；（回调函数）
+
+});
+function start(event, a, b){
+ alert(a);
+ alert(b);
+}

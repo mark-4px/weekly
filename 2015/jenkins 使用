@@ -1,0 +1,57 @@
+
+jenkins使用
+
+1. 官网
+http://jenkins-ci.org/
+
+使用jenkins需要下载jenkins.war
+
+下载地址 
+http://mirrors.jenkins-ci.org/war/latest/jenkins.war
+
+2. 安装
+下载后直接把jenkins.war放到tomcat webapps/下即可使用
+
+启动tomcat访问
+localhost:8080/jenkins
+
+
+或者直接到jenkins.war所在目录运行
+
+java -jar jenkins.war
+访问 localhost:8080/即可
+
+
+3. 权限设置
+
+安装jenkins后在系统管理中开启全局安全设置，使用Jenkins专有用户数据库并允许用户注册
+
+授权策略选择 ： 登录用户可以做任何事情
+
+
+保存 刷新页面 
+
+注册新用户，用注册的用户登录
+
+在系统设置中取消注册功能
+
+这样就只有一个你自己的管理员账号了
+
+
+
+4. jenkins 忘记密码的办法
+windows 用户在
+
+C:\Users\Administrator\.jenkins目录下有个config.xml
+
+打开
+ <useSecurity>true</useSecurity>
+
+改成
+ <useSecurity>false</useSecurity>
+
+重启
+  
+  暂时没有找到win上怎么重启，直接重启tomcat算了
+
+

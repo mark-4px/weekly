@@ -1,0 +1,33 @@
+1.生成密钥
+ssh-keygen -t rsa
+
+
+2.交换密钥
+
+交换到对方的.ssh目录下
+
+.ssh目录下
+
+
+3.添加到可信任列表
+对方的公共密钥                       自己的信任列表
+在.ssh目录下
+
+ cat other_id_rsa.pub  >> authorized_keys
+
+
+
+
+cat cmsdb_id_rsa.pub  >> authorized_keys
+cat wuwei_id_rsa.pub  >> authorized_keys
+ cat cms_id_rsa.pub  >> authorized_keys
+cat frameworkdb_id_rsa.pub  >> authorized_keys
+cat jogi_id_rsa.pub  >> authorized_keys
+
+
+
+
+cat frameworkweb_id_rsa.pub  >> authorized_keys
+cat cms_id_rsa.pub  >> authorized_keys
+cat frameworkdb_id_rsa.pub  >> authorized_keys
+cat jogi_id_rsa.pub  >> authorized_keys
